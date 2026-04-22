@@ -37,25 +37,20 @@ NutriSync/
 │   ├── main.py                          # FastAPI app entry point
 │   ├── requirements.txt                 # All pinned Python dependencies
 │   ├── .env.example                     # Environment variable template
-│   ├── modules/
-│   │   ├── module1_user_profile.py      # User profile + goal API
-│   │   ├── module2_wearable.py          # Google Health Connect OAuth2
-│   │   ├── module3_eda.py               # Biometric EDA utilities
-│   │   ├── module4_biometric.py         # TDEE + nutrient flags
-│   │   ├── module5_usda.py              # USDA DB + fuzzy matcher
-│   │   ├── module6_prompt.py            # RAG prompt builder (8-section)
-│   │   ├── module7_llm.py               # Groq LLM caller + retry
-│   │   ├── module8_parser.py            # Recipe parser + correction loop
-│   │   └── module10_evaluation.py       # Evaluation engine (MAE, t-test)
-│   ├── data/
-│   │   ├── usda_nutrition_processed.csv # 5,005 ingredients (tracked in Git)
-│   │   ├── recipe_index.faiss           # NOT in Git — download separately
-│   │   └── recipes.db                   # NOT in Git — download separately
-│   └── tests/
-│       ├── test_module4.py
-│       ├── test_module5.py
-│       ├── test_module6.py
-│       └── test_module8.py
+│   ├── module1_user_profile.py      # User profile + goal API
+|   ├── module2_wearable.py          # Google Health Connect OAuth2
+│   ├── module3_eda.py               # Biometric EDA utilities
+│   ├── module4_biometric.py         # TDEE + nutrient flags
+│   ├── module5_usda.py              # USDA DB + fuzzy matcher
+│   ├── module6_prompt.py            # RAG prompt builder (8-section)
+│   ├── module7_llm.py               # Groq LLM caller + retry
+│   ├── module8_parser.py            # Recipe parser + correction loop
+│   └── module10_evaluation.py       # Evaluation engine (MAE, t-test)
+│   └── data/
+│       ├── usda_nutrition_processed.csv # 5,005 ingredients (tracked in Git)
+│       ├── recipe_index.faiss           # NOT in Git — download separately
+│       └── recipes.db                   # NOT in Git — download separately
+│   
 ├── frontend/
 │   ├── src/
 │   │   ├── App.jsx
@@ -70,14 +65,6 @@ NutriSync/
 │   │       └── api.js
 │   ├── package.json
 │   └── index.html
-├── evaluation/
-│   ├── module10_validation.py           # Standalone evaluation script
-│   ├── nutrition5k_cleaned.csv          # 4,762-dish validation dataset
-│   └── validation_report.json          # Full results JSON
-├── notebooks/
-│   ├── 01_wearable_eda.ipynb
-│   ├── 02_usda_eda.ipynb
-│   └── 03_evaluation_results.ipynb
 └── README.md
 ```
 
