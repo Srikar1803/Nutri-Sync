@@ -1,0 +1,37 @@
+# Secrets — NEVER commit these
+.env
+*.env
+
+# Large data files — download separately
+*.faiss
+*.db
+*.sqlite
+backend/data/recipe_index.faiss
+backend/data/recipes.db
+
+# Python
+__pycache__/
+**/__pycache__/
+venv/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/

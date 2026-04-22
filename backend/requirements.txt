@@ -1,0 +1,52 @@
+# ─────────────────────────────────────────────────────────────
+# NutriSync — Backend Requirements
+# Python 3.11+ required
+# Install: pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────
+
+# ── Web Framework ────────────────────────────────────────────
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+pydantic==2.6.4
+
+# ── LLM (Groq API) ───────────────────────────────────────────
+groq==0.11.0
+
+# ── Vector Search ────────────────────────────────────────────
+faiss-cpu==1.7.4
+# NOTE: If running on a GPU machine (e.g., Colab T4), replace with:
+# faiss-gpu-cu12==1.7.4
+
+# ── Embeddings ───────────────────────────────────────────────
+sentence-transformers==3.3.1
+torch==2.1.0
+# NOTE: sentence-transformers will pull transformers as a dependency.
+# Do NOT separately install FlagEmbedding — it conflicts with
+# sentence-transformers on transformers>=4.45.
+
+# ── Data Processing ──────────────────────────────────────────
+pandas==2.2.1
+numpy==1.26.4
+rapidfuzz==3.6.2
+scipy==1.12.0
+
+# ── Database ─────────────────────────────────────────────────
+# SQLite is built into Python — no install needed.
+# aiosqlite is used for async reads in the recipe metadata store.
+aiosqlite==0.20.0
+
+# ── HTTP Client (USDA API calls) ─────────────────────────────
+httpx==0.27.0
+requests==2.31.0
+
+# ── Environment Variables ────────────────────────────────────
+python-dotenv==1.0.1
+
+# ── Testing ──────────────────────────────────────────────────
+pytest==8.1.1
+pytest-asyncio==0.23.6
+httpx==0.27.0          # also used as async test client for FastAPI
+
+# ── Utilities ────────────────────────────────────────────────
+tqdm==4.66.2           # progress bars for index build / batch eval
